@@ -1,0 +1,29 @@
+html
+    head
+        title User List
+    body
+        h1 User List
+        ul
+          each user in users
+              li
+                  h2= user.name
+                  p Email: #{user.email}
+                  p Birthday: #{user.birthday}
+                  p Position: #{user.position}
+                  p Grade: #{user.grade}
+                  p Work Project: #{user.workProject}
+                  p Phone: #{user.phone}
+                  if user.hobbies
+                      p Hobbies:
+                      ul
+                        each hobby in user.hobbies
+                            li= hobby
+                  if user.hardSkills
+                      p Hard Skills:
+                      ul
+                        each skill in user.hardSkills
+                            li= skill
+                  p Description: #{user.description}
+                  p Progress: #{user.progress}
+                  p Office: #{user.office}
+                  p Telegram: #{user.telegram}
